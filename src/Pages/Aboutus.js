@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Alert, View, Text, Image,TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { createAppContainer, createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
-import {  Spinner , CardSection, Card , CustomButton} from "../components/Common";
+import {  Spinner , CardSection, Card , CustomButton,styles} from "../components/Common";
 import DashBoard from "../Pages/DashBoard";
 import ViewVideo from "../Pages/ViewVideo"
 import firebase from "firebase";

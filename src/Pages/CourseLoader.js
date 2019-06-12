@@ -2,11 +2,15 @@ import React, { Component } from "react";
 import { Text , View,Alert, TouchableOpacity} from "react-native";
 import Firebase from "./Firebase";
 import { withNavigation } from 'react-navigation';
+
 // @flow
 
 import { CustomButton, Card, CardSection, Input, Spinner } from "../components/Common";
+import {Feedback, Aboutus, LoginForm} from '../Pages';
+import { CourseContents } from "./CourseContents";
 
-class LoginForm extends Component {
+
+class CourseLoader extends Component {
 
     static navigationOptions = ({ navigation }) => {
         const { params = {} } = navigation.state;
@@ -31,6 +35,30 @@ constructor(props){
         });
 
 }
+
+
+renderContent() {
+
+            switch (this.state.loggedIn) {
+            case true:
+                return (
+                    <CourseContents navigation={this.props.navigation} />
+                        );
+            case false:
+                    return <LoginForm navigation={this.props.navigation} />;
+            default:
+                    return alert.alert("Loading...");
+            }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,53 +138,10 @@ render() {
     const { navigation } = this.props;
 return (
 
-
-    <Card>
-
-            <CardSection>    
-                <View>     
-                <Text style ={styles.myHeader}>Login Form</Text>
-                </View>
-            </CardSection>
-
-
-
-            {/*Email */}
-            <CardSection>
-            {}
-            <Input
-            autoCorrect
-            placeholder="user@email.com"
-            label="Email: "
-            value={this.state.email}
-            onChangeText={email => this.setState({ email })}
-            />
-            </CardSection>
-            
-            
-            {/*Password */}
-            <CardSection>
-                <Input
-                secureTextEntry
-                placeholder="password"
-                label="Password"
-                value={this.state.password}
-                onChangeText={password => this.setState({ password })}
-                />
-            </CardSection>
-            {/* For the Error Message */}
-            <Text style={styles.errorTextStyle}>{this.state.error}</Text>
-            
-            
-            {/* Login Button */}
-            <CardSection>
-                {this.renderSignInBtn()}   
-                {/* Conditional rendering for showing "loading" iconn */}
-            </CardSection>
-            
-            {/* Login Button */}
-
-    </Card>
+   <View>
+        {this.renderContent()}
+    </View>
+  
 
 );
 }
@@ -175,5 +160,5 @@ myHeader:{
 };
 
 
-export {LoginForm};
+export {CourseLoader};
 

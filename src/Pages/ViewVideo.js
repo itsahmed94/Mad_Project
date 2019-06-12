@@ -10,7 +10,7 @@ import { StyleSheet,
 import { StackNavigator } from "react-navigation";
 import YouTube from "react-native-youtube";
 
-export default class ViewVideo extends React.Component {
+export class ViewVideo extends React.Component {
   static navigationOptions = {
     headerTitle: "W4edu360",
     headerStyle: {

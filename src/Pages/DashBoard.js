@@ -100,4 +100,4 @@ const styles = StyleSheet.create({
       },
   });
 
-  export default DashBoard;
+  export default {DashBoard};

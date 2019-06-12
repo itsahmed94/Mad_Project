@@ -1,4 +1,4 @@
-package com.w4edu360;
+package com.mad_project;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "w4edu360";
+        return "Mad_Project";
     }
 }
