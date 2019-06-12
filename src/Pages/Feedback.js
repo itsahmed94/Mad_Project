@@ -17,7 +17,7 @@ import LoginForm from './LoginForm'
     };
     constructor(props) {
       super(props);
-      this.state = { text: 'Remove this text and type Feed back about app' };
+      this.state = { text: 'Enter you feedback comments here.' };
     }
   
     render() {
@@ -32,7 +32,8 @@ import LoginForm from './LoginForm'
   
           />  
   
-        <Text  style={styles.txt}>FeedBack</Text>
+        <Text  style={styles.txt}>Feedback</Text>
+        <Text>Send your feedback about the app to the us....</Text>
   
         <TextInput
         style={{height: 40,width:340, borderColor: '#4682b4', borderWidth: 1 , fontWeight:"bold" ,padding:10 ,marginTop: 50, marginBottom: 50}}
@@ -40,6 +41,11 @@ import LoginForm from './LoginForm'
         value={this.state.text}
       />
 
+        
+                
+  <TouchableOpacity onPress={() => Alert.alert("Thank you for sending your feedback... {'\n'}We'll get back to you soon!")}>
+            <Text style={styles.btn}>SUBMIT</Text>
+          </TouchableOpacity>
           
   
           

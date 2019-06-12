@@ -22,11 +22,10 @@ class CourseContents extends React.Component {
     {
       const {navigation} = this.props;
 
-    //  this.props.navigation.setParam({videoId:courseVideoLink});
 
         navigation.navigate('Video', {
         
-        videoId: '6ZnfsJ6mM5c'
+        videoId: courseVideoLink
         
         })
 

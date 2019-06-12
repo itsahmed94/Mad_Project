@@ -38,7 +38,7 @@ class DetailsScreen extends React.Component {
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => this.props.navigation.navigate('FeedBack')}>
-          <Text style={styles.btn}>FeedBack</Text>
+          <Text style={styles.btn}>Feedback</Text>
         </TouchableOpacity>
 
         
