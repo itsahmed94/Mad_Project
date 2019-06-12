@@ -4,6 +4,10 @@ import Firebase from "./Firebase";
 import { withNavigation } from 'react-navigation';
 // @flow
 
+//User: abc123@gmail.com
+//password: 111222
+
+
 import { CustomButton, Card, CardSection, Input, Spinner } from "../components/Common";
 
 class LoginForm extends Component {
