@@ -36,7 +36,7 @@ class Aboutus extends React.Component{
       <Text style={styles.para}>
 
        
-       {'\nMUHAMMAD TAYYAB RANA (FA17-MCSW-0010) \n\nAHMED SHABBIR (SP17-MCSW-0009) \n\nUMER SHAFIQ \n\nFAIZ ULLAH SHAH (FA17-MCSW-0006) \n\nMUHAMMAD SAQIB (SP18-MCSW-0004) \n\n'}
+       {'\nMUHAMMAD TAYYAB RANA (FA17-MCSW-0010) \n\nAHMED SHABBIR (SP17-MCSW-0009) \n\nUMER SHAFIQ (BSCS-0052) \n\nFAIZ ULLAH SHAH (FA17-MCSW-0006) \n\nMUHAMMAD SAQIB (SP18-MCSW-0004) \n\n'}
         
         
         
