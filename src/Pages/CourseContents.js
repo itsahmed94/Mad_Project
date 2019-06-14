@@ -69,7 +69,7 @@ class CourseContents extends React.Component {
 
 </CardSection>
 <CardSection>
-<Text style={{fontSize:15,}}>A complete course with video tutorials on mobile app development. Please click on any of the course video you'll able to add feedback later to the videos as well.  </Text>
+<Text style={{fontSize:15,}}>A complete course with video tutorials on mobile app development.Please click on any of the course video you'll able to add feedback later to the videos as well.  </Text>
 
 </CardSection>
 
@@ -85,7 +85,11 @@ class CourseContents extends React.Component {
     >
               <Text>2 | Django in 4 hours</Text>
     </TouchableOpacity>
-    
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('6u2zsJOJ_GE')}
+    >
+              <Text>3 | Introduction to Database Management System</Text>
+    </TouchableOpacity>
     
    
    </View>
