@@ -18,6 +18,13 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-start'
      
     },
+    txtCenter:{
+      color:'#4f5259',
+      fontSize: 35,
+      fontWeight: 'bold',
+      marginTop: -15,
+      textAlign: 'center'
+    },
     txt: {
        
         color:'#4f5259',
@@ -37,7 +44,7 @@ const styles = StyleSheet.create({
   
       para:{
         color:'#000000',
-        fontSize: 20,
+        fontSize: 18
       
   
       },

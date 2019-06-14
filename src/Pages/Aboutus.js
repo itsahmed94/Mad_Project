@@ -30,12 +30,17 @@ class Aboutus extends React.Component{
 
 <View style = {styles.container}>
          
-      <Text  style={styles.heading}>General Info About App</Text>
+      <Text  style={styles.txtCenter  }>App Developers Team</Text>
 
 
       <Text style={styles.para}>
 
-      Students can now get videos lecture of any programming language from hear 
+       
+       {'\nMUHAMMAD TAYYAB RANA (FA17-MCSW-0010) \n\nAHMED SHABBIR (SP17-MCSW-0009) \n\nUMER SHAFIQ (BSCS-0052) \n\nFAIZ ULLAH SHAH (FA17-MCSW-0006) \n\nMUHAMMAD SAQIB (SP18-MCSW-0004) \n\n'}
+        
+        
+        
+         {/* Students can now get videos lecture of any programming language from hear 
       on one click.
       
       Students can now get videos lecture of any programming language from hear 
@@ -45,7 +50,7 @@ class Aboutus extends React.Component{
       on one click.
 
       Students can now get videos lecture of any programming language from hear 
-      on one click.
+      on one click. */}
       </Text>
 
       </View>
