@@ -30,7 +30,7 @@ class Aboutus extends React.Component{
 
 <View style = {styles.container}>
          
-      <Text  style={styles.heading}>General Info About App</Text>
+      <Text  style={styles.txtCenter  }>App Developers Team</Text>
 
 
       <Text style={styles.para}>
