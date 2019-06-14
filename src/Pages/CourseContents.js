@@ -75,12 +75,12 @@ class CourseContents extends React.Component {
 
 <CardSection >
 <View style={{flex:1, flexDirection:'row', flexWrap:'wrap', paddingTop:50, paddingBottom:50}}> 
-    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15}}
       onPress={() => this.openVideo('frvXANSaSec')}
     >
-              <Text>1 | Introduction</Text>
+             <Text style={{fontSize:25}}> 1 | Introduction </Text>
     </TouchableOpacity>
-    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:22}}
       onPress={() => this.openVideo('F5mRW0jo-U4')}
     >
               <Text>2 | Django in 4 hours</Text>
