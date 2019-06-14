@@ -6,5 +6,5 @@ export * from "./LoginForm";
 export * from "./HomeScreen";
 export * from "./ViewVideo";
 export * from "./CourseContents"
-
+export * from "./Register"
 

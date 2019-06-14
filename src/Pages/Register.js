@@ -10,15 +10,13 @@ import { withNavigation } from 'react-navigation';
 
 import { CustomButton, Card, CardSection, Input, Spinner } from "../components/Common";
 
-class LoginForm extends Component {
-
+class Register extends Component {
     static navigationOptions = {
-        title: 'Login Form'
+        title: 'Register Form',
         
-      };
-        
+      };    
 
-state = { email: "", password: "", error: "", loading: false, signIn: false,  loggedIn: false, videoId: "6ZnfsJ6mM5c" };
+state = { email: "", password: "", error: "", loading: false, signIn: false,  loggedIn: false, videoId: "6ZnfsJ6mM5c",notify:""};
 
 constructor(props){
     super(props)
@@ -27,8 +25,7 @@ constructor(props){
 
       Firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            this.setState({ loggedIn: true });
-            this.setState({ loggedIn: true });
+        this.setState({ loggedIn: true });
         } else {
         this.setState({ loggedIn: false });
         }
@@ -37,44 +34,45 @@ constructor(props){
 }
 
 
-
 onButtonPress() {
 const {email, password} = this.state;
+ //Clear out the Error Message on Every Login Attempt
+
 this.setState({
     error: "",
-    loading: true
+    loading: true,
+    notify: "Registering...."
 });
 
-// Authentication : Fetching data from cloud and exception handling .
-    Firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .then(
-            () => {
-                this.onLoginSuccess(this)
-            }
-        ).catch((e) => {
 
-            //Login failed 
-            this.setState({
-                loading: false,
-                error: e.message
-            })
-        });
+        // Authentication : POST user data in the firebase cloud
+        Firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(this.onLoginSuccess.bind(this))
+        .catch((e) => {
+            this.onLoginFailed(e);
+        })
+
+
+        
+
+
     }
 
 
 
-
+onLoginFailed(e){
+    this.setState({error:e.message, loading:false})
+}
 // Logined Success Function if password is ok then it clear the email , password ,error and loading false ;
 onLoginSuccess() {
-    this.renderContent();    
 
     this.setState({
     email: "",
     password: "",
     loading: false,
-    error: "Login Successful",
+    notify: "Registration Successful",
     signIn: true
     });
 
@@ -83,18 +81,33 @@ onLoginSuccess() {
 }
 
 // Render button function is checking loading true or false if it is true then spinner shows other wise Signin button shows   
-renderSignInBtn() {
+renderSignupBtn() {
     if (this.state.loading) {
     return <Spinner size="large" />;
     }
     return (
     <CustomButton onPress={() => this.onButtonPress(this)}>
-    Sign In 
+    Register
     </CustomButton>
 
     );
+11
+}
+
+
+renderNotification(){
+    if(this.state.error == ""){
+        return(
+        <Text style={styles.notifyTextStyle}>{this.state.notify}</Text>)
+        }
+        else{
+            return(
+            <Text style={styles.errorTextStyle}>{this.state.error}</Text>)
+        }
 
 }
+
+
 
 render() {
     const { navigation } = this.props;
@@ -130,25 +143,23 @@ return (
                 onChangeText={password => this.setState({ password })}
                 />
             </CardSection>
-            {/* For the Error Message */}
-            <Text style={styles.errorTextStyle}>{this.state.error}</Text>
+         
             
             
-            {/* Login Button */}
+            {/* Register Button */}
             <CardSection>
-                {this.renderSignInBtn()}   
+                {this.renderSignupBtn()}   
                 {/* Conditional rendering for showing "loading" iconn */}
             </CardSection>
             
-            {/* Login Button */}
+            {/* Register Button */}
 
             <CardSection>
-                <Text>Not Registered? </Text>
-                <CustomButton onPress={() => navigation.navigate("Register")}>
-                Register Now 
-                </CustomButton>
-                
-            </CardSection>
+               {/* For the Error Message */}
+               {this.renderNotification()}        
+               </CardSection>
+            
+
 
     </Card>
 
@@ -165,9 +176,14 @@ color: "red"
 
 myHeader:{
     color: '#000000',fontWeight: 'bold' , fontSize: 35, paddingLeft:100, paddingBottom:10
-}
+},
+notifyTextStyle: {
+    fontSize: 20,
+    alignSelf: "center",
+    color: "green"
+    },
 };
 
 
-export {LoginForm};
+export {Register};
 

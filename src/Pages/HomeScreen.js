@@ -3,6 +3,8 @@ import {Alert, View, Text, Image,TextInput, StyleSheet, TouchableOpacity } from 
 import { createAppContainer, createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 import {  Spinner , CardSection, Card , CustomButton,styles} from "../components/Common";
 import {DetailsScreen, Feedback, Aboutus, LoginForm} from '.';
+import LinearGradient from 'react-native-linear-gradient';
+
 
 import ViewVideo from "./ViewVideo"
 
@@ -10,12 +12,6 @@ import firebase from "firebase";
 
 class HomeScreen extends React.Component {
  
-    componentWillMount(){
- 
-     
-    
-    }
-  
     constructor(props){
       super(props)
     }
@@ -27,21 +23,24 @@ class HomeScreen extends React.Component {
       title: 'Student Learning App',
       
     };
-  
-     
+   
+    
   
       render() {
      
   
   
       return (
+        
          
-        <View style={{  alignItems: 'center', justifyContent: 'center' }}> 
+<LinearGradient colors={['#f1f382', '#f1f382', 'white']} style={styles.linearGradient}>
+       {/* <LinearGradient colors={['#d4f6f2', '#f1f382', '#f1f333']} style={styles.linearGradient}> */}
+
          <Image
           
           
           source={require('../img/Logo.png')}
-          style={{ marginTop:10,width: 250, height: 250, marginRight:10,justifyContent:'flex-end'}}
+          style={{ marginTop:10,width: 250, height: 250}}
   
           />     
           <Text style={styles.txt}>Welcome</Text>
@@ -51,8 +50,8 @@ class HomeScreen extends React.Component {
   <TouchableOpacity onPress={() => this.props.navigation.navigate('Details')}>
             <Text style={styles.btn}>CONTINUE</Text>
           </TouchableOpacity>
-          
-        </View>
+       
+          </LinearGradient >
       );
     }
   }

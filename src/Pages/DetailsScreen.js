@@ -12,11 +12,11 @@ import {Feedback, Aboutus, LoginForm} from '../Pages';
 
 class DetailsScreen extends React.Component {
 
-    static navigationOptions = ({ navigation }) => {
-      const { params = {} } = navigation.state;
-        title: "Test"
-        
-      };
+   
+    static navigationOptions = {
+      title: 'Student Learning App',
+      
+    };
       
       state = {loggedIn: false}
  
@@ -33,7 +33,7 @@ class DetailsScreen extends React.Component {
 
         />  
 
-<TouchableOpacity onPress={() => this.props.navigation.push('Loader',{loggedIn: this.state.loggedIn})}>
+<TouchableOpacity onPress={() => this.props.navigation.push('Loader',{loggedIn: this.state.loggedIn, navigation: this.navigation})}>
           <Text style={styles.btn}>Sign In</Text>
         </TouchableOpacity>
 

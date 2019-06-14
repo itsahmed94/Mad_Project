@@ -4,14 +4,23 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       marginTop: 50,
-      marginRight:20,
-      marginLeft: 20,
+      marginRight:25,
+      marginLeft: 25,
   
     } , 
-    
+    linearGradient: {
+      flex: 1,
+      paddingLeft: 13,
+      paddingRight: 13,
+      borderRadius: 5,
+      textAlign:'center',
+      alignItems: 'center',
+      justifyContent: 'flex-start'
+     
+    },
     txt: {
        
-        color:'#4682b4',
+        color:'#4f5259',
         fontSize: 35,
       fontWeight: 'bold',
       marginTop: -15,
@@ -41,6 +50,7 @@ const styles = StyleSheet.create({
       marginTop:20,
       padding:10,
       width: 160,
+      
         
       },
   });

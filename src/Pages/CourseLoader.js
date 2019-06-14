@@ -12,12 +12,10 @@ import { CourseContents } from "./CourseContents";
 
 class CourseLoader extends Component {
 
-    static navigationOptions = ({ navigation }) => {
-        const { params = {} } = navigation.state;
-          title: "Test"
-          
-        };
+    static navigationOptions = {
+        title: 'Login/Register',
         
+      };    
 
 state = { email: "", password: "", error: "", loading: false, signIn: false,  loggedIn: false, videoId: "6ZnfsJ6mM5c" };
 
@@ -62,47 +60,6 @@ renderContent() {
 
 
 
-//Helper method onButtonPress() to Login the user
-onRegister(){
-    const { email, password } = this.state;
-    //Firebase mathod to login using userid & password
-
-    //Clear out the Error Message on Every Login Attempt
-    this.setState({ error: "", loading: true });
-
-    // Authentication : Fetching data from cloud and exception handling .
-
-    
-
-}
-
-onButtonPress() {
-const {email, password} = this.state;
-this.setState({
-    error: "",
-    loading: true
-});
-
-// Authentication : Fetching data from cloud and exception handling .
-    Firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .then(
-            () => {
-                this.onLoginSuccess(this)
-            }
-        ).catch((e) => {
-
-            //Login failed 
-            this.setState({
-                loading: false,
-                error: e.message
-            })
-        });
-    }
-
-
-
 
 // Logined Success Function if password is ok then it clear the email , password ,error and loading false ;
 onLoginSuccess() {
@@ -120,19 +77,7 @@ onLoginSuccess() {
 
 }
 
-// Render button function is checking loading true or false if it is true then spinner shows other wise Signin button shows   
-renderSignInBtn() {
-    if (this.state.loading) {
-    return <Spinner size="large" />;
-    }
-    return (
-    <CustomButton onPress={() => this.onButtonPress(this)}>
-    Sign In 
-    </CustomButton>
 
-    );
-
-}
 
 render() {
     const { navigation } = this.props;

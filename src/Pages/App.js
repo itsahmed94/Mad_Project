@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Alert, View, Text, Image,TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { createAppContainer, createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 import {  Spinner , CardSection, Card , CustomButton,styles} from "../components/Common";
-import {DetailsScreen, Feedback, Aboutus, LoginForm, HomeScreen, ViewVideo, CourseContents} from '../Pages';
+import {DetailsScreen, Feedback, Aboutus, LoginForm, HomeScreen, ViewVideo, CourseContents,Register} from '../Pages';
 
 
 import firebase from "firebase";
@@ -38,6 +38,9 @@ const RootStack = createStackNavigator(
     },
     Loader: {
       screen: CourseLoader
+    },
+    Register:{
+      screen: Register
     }
 
   },
