@@ -78,17 +78,22 @@ class CourseContents extends React.Component {
     <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
       onPress={() => this.openVideo('frvXANSaSec')}
     >
-              <Text>1 | Introduction to React Native</Text>
+              <Text style={{fontSize:15}}>1 | Introduction to React Native</Text>
     </TouchableOpacity>
     <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
       onPress={() => this.openVideo('F5mRW0jo-U4')}
     >
-              <Text>2 | Django in 4 hours</Text>
+              <Text style={{fontSize:15}}>2 | Django in 4 hours</Text>
     </TouchableOpacity>
     <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
       onPress={() => this.openVideo('6u2zsJOJ_GE')}
     >
-              <Text>3 | Introduction to Database Management System</Text>
+             <Text style={{fontSize:15}}>3 | Introduction to Database Management System</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('vLnPwxZdW4Y')}
+    >
+            <Text style={{fontSize:15}}>4 | Introduction to Programming C++</Text>
     </TouchableOpacity>
     
    
