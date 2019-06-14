@@ -11,9 +11,23 @@ import Firebase from "./Firebase";
 
 class CourseContents extends React.Component {
 
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: 'Course Dashboard'
+    };
+  };
 
     //Getting State from previous component?
     state = { email: "", password: "", error: "", loading: false, signIn: false,  loggedIn: false, videoId: "6ZnfsJ6mM5c" };
+
+
+
+    constructor(props){
+      super(props)
+      this.props.navigation.setParams({myPageTitle: 'Course Dashboard'});
+    }
+  
+   
 
     
 
@@ -31,6 +45,7 @@ class CourseContents extends React.Component {
 
     }
 
+    
     
 
 

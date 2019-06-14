@@ -12,10 +12,13 @@ import { CourseContents } from "./CourseContents";
 
 class CourseLoader extends Component {
 
-    static navigationOptions = {
-        title: 'Login/Register',
-        
-      };    
+    
+    static navigationOptions = ({ navigation }) => {
+        return {
+          title: navigation.getParam('myPageTitle', ''),
+        };
+      };
+    
 
 state = { email: "", password: "", error: "", loading: false, signIn: false,  loggedIn: false, videoId: "6ZnfsJ6mM5c" };
 
@@ -34,13 +37,27 @@ constructor(props){
 
 }
 
+componentWillUnmount(){
+    this.props.navigation.setParams({myPageTitle: 'Course Dashboard'});
+
+}
+
+
+
+componentDidmount(){
+ 
+
+}
+
 
 renderContent() {
 
             switch (this.state.loggedIn) {
             case true:
                 return (
-                    <CourseContents navigation={this.props.navigation} />
+                   
+                    <CourseContents navigation={this.props.navigation}/>
+                    
                         );
             case false:
                     return <LoginForm navigation={this.props.navigation} />;

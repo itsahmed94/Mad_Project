@@ -20,8 +20,10 @@ class LoginForm extends Component {
 
 state = { email: "", password: "", error: "", loading: false, signIn: false,  loggedIn: false, videoId: "6ZnfsJ6mM5c" };
 
+
 constructor(props){
     super(props)
+    this.props.navigation.setParams({myPageTitle: 'Login Form'});
 
    
 
