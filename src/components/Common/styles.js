@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   
       para:{
         color:'#000000',
-        fontSize: 20,
+        fontSize: 18
       
   
       },

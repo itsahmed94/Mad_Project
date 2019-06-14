@@ -65,11 +65,11 @@ class CourseContents extends React.Component {
 
  <Card>
    <CardSection style={{paddingTop:130}}>
-    <Text style={{fontSize:30,paddingTop:15}}> Mobile App Development Course</Text>
+    <Text style={{fontSize:30,paddingTop:15}}>Mobile App Development Course</Text>
 
 </CardSection>
 <CardSection>
-<Text style={{fontSize:15,}}> A complete course with video tutorials on mobile app development. Please click on any of the course video you'll able to add feedback later to the videos as well.  </Text>
+<Text style={{fontSize:15,}}>A complete course with video tutorials on mobile app development. Please click on any of the course video you'll able to add feedback later to the videos as well.  </Text>
 
 </CardSection>
 
@@ -78,7 +78,7 @@ class CourseContents extends React.Component {
     <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
       onPress={() => this.openVideo('frvXANSaSec')}
     >
-              <Text>1 | Introduction</Text>
+              <Text>1 | Introduction to React Native</Text>
     </TouchableOpacity>
     <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
       onPress={() => this.openVideo('F5mRW0jo-U4')}
