@@ -12,6 +12,8 @@ import { CourseContents } from "./CourseContents";
 
 class CourseLoader extends Component {
 
+
+
     
     static navigationOptions = ({ navigation }) => {
         return {
@@ -35,6 +37,7 @@ constructor(props){
         }
         });
 
+
 }
 
 componentWillUnmount(){
@@ -50,13 +53,19 @@ componentDidmount(){
 }
 
 
+componentWillMount(){
+
+}
+
 renderContent() {
+
 
             switch (this.state.loggedIn) {
             case true:
                 return (
-                   
+
                     <CourseContents navigation={this.props.navigation}/>
+                    
                     
                         );
             case false:
