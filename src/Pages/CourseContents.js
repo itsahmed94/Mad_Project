@@ -81,7 +81,7 @@ class CourseContents extends React.Component {
       onPress={() => this.openVideo('frvXANSaSec')}
     >
 
-             <Text style={{fontSize:25}}> 1 | Introduction </Text>
+             <Text style={{fontSize:15}}> 1 | Introduction </Text>
 
     </TouchableOpacity>
     <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:22}}
@@ -99,9 +99,43 @@ class CourseContents extends React.Component {
     >
             <Text style={{fontSize:15}}>4 | Introduction to Programming C++</Text>
     </TouchableOpacity>
-    
-   
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('YWnBbNj_G-U')}
+    >
+            <Text style={{fontSize:15}}>5 | Introduction to Data Structures and Algorithems</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('w8Dq8blTmSA')}
+    >
+            <Text style={{fontSize:15}}>6 | Introduction to Basic Electronics</Text>
+    </TouchableOpacity>    
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('iRSAmekqRBo')}
+    >
+            <Text style={{fontSize:15}}>7 | Introduction to Basic .Net Framework</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('rfscVS0vtbw')}
+    >
+            <Text style={{fontSize:15}}>8 | Introduction to Python for Beginners   </Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('PkZNo7MFNFg')}
+    >
+            <Text style={{fontSize:15}}>9 | Introduction to Java Script for Beginners   </Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={{width:'98%',margin:5, borderColor:'aquamarine', borderStyle: 'solid', borderWidth:2, height:50, textAlignVertical:'center', padding:15, fontSize:18}}
+      onPress={() => this.openVideo('N6BghzuFLIg')}
+    >
+            <Text style={{fontSize:15}}>10 | Introduction to Data Science   </Text>
+    </TouchableOpacity>
+
+
    </View>
+
+
+
+   
 
   
 
